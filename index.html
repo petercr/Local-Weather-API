@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
+
     <title>Local Weather Page</title>
-    
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -16,7 +16,7 @@
         <p id="temp">Degrees</p>
         <p id="FarOrCel">o Far</p>
         <p id="condition">Feels?Looks?</p>
-    
+
     <div class="bottom">
         <p>Peter Cruckshank</p>
         <button class="btn">Twitter</button>
@@ -31,37 +31,7 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
-<script>
-    
-    function geoFindMe() {
-  var output = document.getElementById("location");
-
-  if (!navigator.geolocation){
-    output.innerHTML = "Geolocation is not supported by your browser";
-    return;
-  }
-
-  function success(position) {
-    var latitude  = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-    var img = new Image();
-    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    output.appendChild(img);
-  }
-
-  function error() {
-    output.innerHTML = "Unable to retrieve your location";
-  }
-
-  output.innerHTML = "<p>Locating…</p>";
-
-  navigator.geolocation.getCurrentPosition(success, error);
-}
-</script>
+    <script src="/src/script.js" charset="utf-8"></script>
 
 
 
