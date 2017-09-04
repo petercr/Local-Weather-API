@@ -27,3 +27,15 @@ output.innerHTML = "<p>Locating…</p>";
 
 navigator.geolocation.getCurrentPosition(success, error);
 }
+
+    $.ajax({
+    type: "GET",
+    url: "https://fcc-weather-api.glitch.me/",
+    data: "/api/current?lon=:" +longitude&+"lat=:"+latitude,
+    dataType: "dataType",
+    success: function (response) {
+        $('#condition').html()
+    }
+});
+
+
