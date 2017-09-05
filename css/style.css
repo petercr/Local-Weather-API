@@ -1,6 +1,11 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .container {
+    height: 100%;
     background: grey;
     text-align: center;
-    font-size: 1.5em;
-
+    font-size: 1.25em;
 }
