@@ -19,12 +19,11 @@ function geoFindMe() {
         // jQuery AJAX call FreeCodeCamp Weather API
         $.getJSON(api, function(data) {
 
-            var img = new Image();
-            img.src = data.weather;
 
-            output.appendChild(img);
-            console.log(data);
+
+            console.log(data.weather);
             console.log(api);
+            $('condition').attr(src, data.weather[0].icon);
         });
 
     } // end success
