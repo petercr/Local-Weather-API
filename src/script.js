@@ -2,40 +2,40 @@ var latitude, longitude;
 
 
 function geoFindMe() {
-var output = document.getElementById("location");
+    var output = document.getElementById("location");
 
-if (!navigator.geolocation){
-output.innerHTML = "Geolocation is not supported by your browser";
-return;
-}
+    if (!navigator.geolocation) {
+        output.innerHTML = "Geolocation is not supported by your browser";
+        return;
+    }
 
-function success(position) {
-latitude  = position.coords.latitude;
-longitude = position.coords.longitude;
+    function success(position) {
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
 
-output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+        output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
-var api = "https://fcc-weather-api.glitch.me/api/current?lon=" + longitude + "&lat="+ latitude;
-// jQuery AJAX call FreeCodeCamp Weather API
-$.getJSON(api, function(data) {
+        var api = "https://fcc-weather-api.glitch.me/api/current?lon=" + longitude + "&lat=" + latitude;
+        // jQuery AJAX call FreeCodeCamp Weather API
+        $.getJSON(api, function(data) {
 
-var img = new Image();
-img.src = data.weather;
+            var img = new Image();
+            img.src = data.weather;
 
-output.appendChild(img);
-console.log(data);
-console.log(api);
-});
+            output.appendChild(img);
+            console.log(data);
+            console.log(api);
+        });
 
-} // end success
+    } // end success
 
-function error() {
-output.innerHTML = "Unable to retrieve your location";
-}
+    function error() {
+        output.innerHTML = "Unable to retrieve your location";
+    }
 
-output.innerHTML = "<p>Locating…</p>";
+    output.innerHTML = "<p>Locating…</p>";
 
-navigator.geolocation.getCurrentPosition(success, error);
+    navigator.geolocation.getCurrentPosition(success, error);
 
 
 
