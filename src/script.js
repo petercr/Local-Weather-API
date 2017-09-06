@@ -23,7 +23,7 @@ function geoFindMe() {
 
             console.log(data.weather);
             console.log(api);
-            $('condition').attr(src, data.weather[0].icon);
+            $('condition').html("<img src=" + data.weather[1].icon + ">");
         });
 
     } // end success
