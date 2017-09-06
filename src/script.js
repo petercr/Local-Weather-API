@@ -1,3 +1,5 @@
+var latitude, longitude;
+
 
 function geoFindMe() {
 var output = document.getElementById("location");
@@ -8,16 +10,24 @@ return;
 }
 
 function success(position) {
-var latitude  = position.coords.latitude;
-var longitude = position.coords.longitude;
+latitude  = position.coords.latitude;
+longitude = position.coords.longitude;
 
 output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
+var api = "https://fcc-weather-api.glitch.me/api/current?lon=" + longitude + "&lat="+ latitude;
+// jQuery AJAX call FreeCodeCamp Weather API
+$.getJSON(api, function(data) {
+
 var img = new Image();
-img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+img.src = data.weather;
 
 output.appendChild(img);
-}
+console.log(data);
+console.log(api);
+});
+
+} // end success
 
 function error() {
 output.innerHTML = "Unable to retrieve your location";
@@ -26,16 +36,7 @@ output.innerHTML = "Unable to retrieve your location";
 output.innerHTML = "<p>Locating…</p>";
 
 navigator.geolocation.getCurrentPosition(success, error);
-}
-
-    $.ajax({
-    type: "GET",
-    url: "https://fcc-weather-api.glitch.me/",
-    data: "/api/current?lon=:" +longitude&+"lat=:"+latitude,
-    dataType: "dataType",
-    success: function (response) {
-        $('#condition').html()
-    }
-});
 
 
+
+} // end of geoFindMe() function
