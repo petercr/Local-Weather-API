@@ -11,10 +11,12 @@
     <!-- Link to my stylesheet-->
     <script /* jQuery 3.2.1.min */ src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script src="/src/script.js" charset="utf-8"></script>
     <!-- Link to custom script with logic-->
-    <script src="https://use.fontawesome.com/e9777fcc81.js"></script>
-    <!-- Link to FontAwesome 4.7 -->
+    <script src="/src/script.js" charset="utf-8"></script>
+    <!-- Link to weather-icons css file -->
+    <link rel="stylesheet" href="/css/weather-icons.min.css">
+
+
 </head>
 
 <body onload="geoFindMe()">
@@ -22,7 +24,7 @@
         <h3>Your Current Weather</h3>
         <p id="location">Someplace, somewhere</p>
         <p id="temp">Degrees</p>
-        <p id="FarOrCel">o Far</p>
+        <p id="FarOrCel">o Far <i class="wi wi-day-haze"></i></p>
         <div id="condition"></div>
 
         <div class="bottom">
