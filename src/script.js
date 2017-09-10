@@ -18,12 +18,11 @@ function geoFindMe() {
         var api = "https://fcc-weather-api.glitch.me/api/current?lon=" + longitude + "&lat=" + latitude;
         // jQuery AJAX call FreeCodeCamp Weather API
         $.getJSON(api, function(data) {
+          ;
 
 
-
-            console.log(data.weather);
-            console.log(api);
-            $('condition').html("<img src=" + data.weather[1].icon + ">");
+            $('#temp').html(data.main.temp);
+            $('#condition').html("<img src=" + data.weather[0].icon;
         });
 
     } // end success
