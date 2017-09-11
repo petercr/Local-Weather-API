@@ -10,17 +10,18 @@ function geoFindMe() {
     }
 
     function success(position) {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
+        latitude = position.coords.latitude.toFixed(2);
+        longitude = position.coords.longitude.toFixed(2);
 
         output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
-        var api = "https://fcc-weather-api.glitch.me/api/current?lon=" + longitude + "&lat=" + latitude;
+        var api = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon="+ longitude + "&units=imperial" + "&APPID=9bc2e8db193857d51a6764aae51aa49c";
+
         // jQuery AJAX call FreeCodeCamp Weather API
         $.getJSON(api, function(data) {
-          
+
             $('#temp').html(data.main.temp + " &deg; C");
-            $('#condition').html("<img src=" + data.weather[0].icon + ">");
+            $('#condition').html("<img src=" + data.weather.icon + ">");
         });
 
     } // end success
