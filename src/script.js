@@ -18,11 +18,9 @@ function geoFindMe() {
         var api = "https://fcc-weather-api.glitch.me/api/current?lon=" + longitude + "&lat=" + latitude;
         // jQuery AJAX call FreeCodeCamp Weather API
         $.getJSON(api, function(data) {
-          ;
-
-
-            $('#temp').html(data.main.temp);
-            $('#condition').html("<img src=" + data.weather[0].icon;
+          
+            $('#temp').html(data.main.temp + " &deg; C");
+            $('#condition').html("<img src=" + data.weather[0].icon + ">");
         });
 
     } // end success
