@@ -1,5 +1,5 @@
-var latitude, longitude;
-
+var latitude, longitude;  // Longitude and Latitude variables
+var Ftemp, Ctemp; // Fahrenheit and Celcius variables
 
 function geoFindMe() {
     var output = document.getElementById("location");
@@ -19,9 +19,13 @@ function geoFindMe() {
 
         // jQuery AJAX call FreeCodeCamp Weather API
         $.getJSON(api, function(data) {
-
-            $('#temp').html(data.main.temp + " &deg; C");
-            $('#condition').html("<img src=" + data.weather.icon + ">");
+            Ftemp = data.main.temp;
+            Ctemp = (Ftemp - 32) * (5 / 9);
+            var city = data.name;
+            $('#temp').html(data.main.temp + " &deg; F");
+            $('#city').html(Ctemp.toFixed(2) + "&deg; C");
+            $('#condition').html("You are " + city + " " + data.sys.country);
+            console.log(api);
         });
 
     } // end success
