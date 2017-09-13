@@ -25,8 +25,8 @@ function geoFindMe() {
 			var weather = data.weather[0].description;
 			$("#temp").html(data.main.temp + " &deg; F");
 			$("#city").html(Ctemp.toFixed(2) + "&deg; C");
-            $("#location").html("You are " + city + " " + data.sys.country);
-            $("#condition").html(weather);
+			$("#location").html("You are " + city + " " + data.sys.country);
+			$("#condition").html(weather);
 			console.log(api);
 		});
 
@@ -43,3 +43,9 @@ function geoFindMe() {
 
 
 } // end of geoFindMe() function
+
+
+$(function).ready{
+    
+
+}
