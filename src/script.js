@@ -24,10 +24,9 @@ function geoFindMe() {
 			var city = data.name;
 			var weather = data.weather[0].description;
 			$("#temp").html(data.main.temp + " &deg; F");
-			$("#city").html(Ctemp.toFixed(2) + "&deg; C");
-			$("#location").html("You are " + city + " " + data.sys.country);
+			$("#location").html("You are " + city + " " + ", " + data.sys.country);
 			$("#condition").html(weather);
-			console.log(api);
+			
 		});
 
 	} // end success
@@ -44,8 +43,15 @@ function geoFindMe() {
 
 } // end of geoFindMe() function
 
-
-$(function).ready{
-    
-
+function switchTemp(){
+	var current = $("#changeTemp").html();
+	if (current.indexOf("F") != -1) {
+		$("#temp").html(Ctemp.toFixed(2) + " &deg; C");
+		$("#changeTemp").html("&deg; C");
+    }
+    else if (current.indexOf("C") != -1) {
+        $("#temp").html(Ftemp.toFixed(2) + " &deg; F");
+		$("#changeTemp").html("&deg; F"); 
+    }
 }
+
