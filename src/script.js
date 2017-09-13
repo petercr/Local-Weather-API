@@ -22,9 +22,11 @@ function geoFindMe() {
 			Ftemp = data.main.temp;
 			Ctemp = (Ftemp - 32) * (5 / 9);
 			var city = data.name;
+			var weather = data.weather[0].description;
 			$("#temp").html(data.main.temp + " &deg; F");
 			$("#city").html(Ctemp.toFixed(2) + "&deg; C");
-			$("#condition").html("You are " + city + " " + data.sys.country);
+            $("#location").html("You are " + city + " " + data.sys.country);
+            $("#condition").html(weather);
 			console.log(api);
 		});
 
