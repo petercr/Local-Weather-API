@@ -23,9 +23,11 @@ function geoFindMe() {
 			Ctemp = (Ftemp - 32) * (5 / 9);
 			var city = data.name;
 			var weather = data.weather[0].description;
+			var iconURL = "http://openweathermap.org/img/w/" + data.weather.icon + ".png";
 			$("#temp").html(data.main.temp + " &deg; F");
 			$("#location").html("You are " + city + " " + ", " + data.sys.country);
 			$("#condition").html(weather);
+			$("#icons").html("<img src=" + iconURL + ">");
 			
 		});
 
