@@ -24,10 +24,10 @@ function geoFindMe() {
 			var city = data.name;
 			var weather = data.weather[0].description;
 			var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-			$("#temp").html(data.main.temp + " &deg; F");
+			$("#temp").html(Math.round(data.main.temp) + " &deg; F");
 			$("#location").html("You are " + city + " " + ", " + data.sys.country);
 			$("#condition").html(weather);
-			$("#icons").html("<img src=" + iconURL + ">");
+			$("#icons").html("<img id='picture' src=" + iconURL + ">");
 
 		});
 
@@ -52,7 +52,7 @@ function switchTemp(){
 		$("#changeTemp").html("&deg; C");
     }
     else if (current.indexOf("C") != -1) {
-        $("#temp").html(Ftemp.toFixed(2) + " &deg; F");
+        $("#temp").html(Math.round(Ftemp )+ " &deg; F");
 		$("#changeTemp").html("&deg; F");
     }
 }
