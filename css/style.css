@@ -10,9 +10,10 @@ body {
     text-align: center;
     font-size: 1.25em;
     padding: 50px;
-    background-image: url("/img/clearNight.jpg");
+    background-image: url("/img/dayRain.jpg");
     background-size: cover;
-    bakg
+    background-position: center
+    
 }
 
 .bottom {

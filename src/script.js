@@ -24,11 +24,22 @@ function geoFindMe() {
 			Ctemp = (Ftemp - 32) * (5 / 9);
 			var city = data.name;
 			var weather = data.weather[0].description;
+			var icon = data.weather[0].icon;
 			var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-			$("#temp").html(Math.round(data.main.temp) + " &deg; F");
-			$("#location").html("You are " + city + " " + ", " + data.sys.country);
-			$("#condition").html(weather);
-			$("#icons").html("<img id='picture' src=" + iconURL + ">");
+
+			$("#temp").html(Math.round(data.main.temp) + " &deg; F"); // displays degrees Far
+			$("#location").html("You are " + city + " " + ", " + data.sys.country); // displays city and country
+			$("#condition").html(weather); // displays the weather condition
+			$("#icons").html("<img id='picture' src=" + iconURL + ">"); // adds an img tag with icon from API
+
+			switch (icon) {
+				case "50n":
+					$(".container").css("background-image", "url('/img/clearkSkyNight.jpg')");
+					break;
+			
+				default:
+				$(".container").css("background-image", "url('/img/nightRain.jpg')");
+			}
 
 		});
 
@@ -52,9 +63,9 @@ function switchTemp(){
 	if (current.indexOf("F") != -1) {
 		$("#temp").html(Ctemp.toFixed(2) + " &deg; C");
 		$("#changeTemp").html("&deg; C");
-    }
-    else if (current.indexOf("C") != -1) {
-        $("#temp").html(Math.round(Ftemp )+ " &deg; F");
+	}
+	else if (current.indexOf("C") != -1) {
+		$("#temp").html(Math.round(Ftemp )+ " &deg; F");
 		$("#changeTemp").html("&deg; F");
-    }
+	}
 }
