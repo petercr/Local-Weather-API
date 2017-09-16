@@ -25,6 +25,7 @@ function geoFindMe() {
 			var city = data.name;
 			var weather = data.weather[0].description;
 			var icon = data.weather[0].icon;
+			console.log("icon number is " + icon);
 			var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
 			$("#temp").html(Math.round(data.main.temp) + " &deg; F"); // displays degrees Far
@@ -34,11 +35,11 @@ function geoFindMe() {
 
 			switch (icon) {
 				case "50n":
-					$(".container").css("background-image", "url('/img/clearkSkyNight.jpg')");
+					$(".container").css({"background-image:", "url('/img/clearkSkyNight.jpg')"});
 					break;
-			
+
 				default:
-				$(".container").css("background-image", "url('/img/nightRain.jpg')");
+				$(".container").css({"background-image:" , "url('/img/nightRain.jpg')"});
 			}
 
 		});
@@ -47,7 +48,7 @@ function geoFindMe() {
 
 	function error() {
 		output.innerHTML = "Unable to retrieve your location";
-		// add in a function to pop up a modal for zip code 
+		// add in a function to pop up a modal for zip code
 	}
 
 	output.innerHTML = "<p>Locating…</p>";
