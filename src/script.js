@@ -6,6 +6,7 @@ function geoFindMe() {
 
 	if (!navigator.geolocation) {
 		output.innerHTML = "Geolocation is not supported by your browser";
+		// add in a function to pop up a modal for zip code
 		return;
 	}
 
@@ -35,6 +36,7 @@ function geoFindMe() {
 
 	function error() {
 		output.innerHTML = "Unable to retrieve your location";
+		// add in a function to pop up a modal for zip code 
 	}
 
 	output.innerHTML = "<p>Locating…</p>";
