@@ -58,24 +58,17 @@ function geoFindMe() {
 			case "04n":
 				$(".container").css("background-image", "url('/img/scatteredCloudsNight.jpg')");
 				break;
+			
 			case "09d":
-				$(".container").css("background-image", "url('/img/dayRain.jpg')");
-				break;
-			case "09n":
-				$(".container").css("background-image", "url('/img/nightRain.jpg')");
-				break;
 			case "10d":
 				$(".container").css("background-image", "url('/img/dayRain.jpg')");
 				break;
+			
 			case "10n":
-				$(".container").css("background-image", "url('/img/nightRain.jpg')");
-				break;
 			case "11d":
-				$(".container").css("background-image", "url('/img/dayRain.jpg')");
-				break;
-			case "11n":
 				$(".container").css("background-image", "url('/img/nightRain.jpg')");
 				break;
+			
 			case "50d":
 				$(".container").css("background-image", "url('/img/mistDay')");
 				break;
