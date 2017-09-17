@@ -33,13 +33,58 @@ function geoFindMe() {
 			$("#condition").html(weather); // displays the weather condition
 			$("#icons").html("<img id='picture' src=" + iconURL + ">"); // adds an img tag with icon from API
 
-			switch (icon) {
-				case "50n":
-					$(".container").css({"background-image:", "url('/img/clearkSkyNight.jpg')"});
-					break;
+			switch (icon) { // switch statement to change background image for each weather type
+			case "01d":
+				$(".container").css("background-image", "url('/img/clearDay.jpg')");
+				break;
+			case "01n":
+				$(".container").css("background-image", "url('/img/clearSkyNight.jpg')");
+				break;
+			case "02d":
+				$(".container").css("background-image", "url('/img/fewCloudDay.jpg')");
+				break;
+			case "02n":
+				$(".container").css("background-image", "url('/img/fewCloudsNight.jpg')");
+				break;
+			case "03d":
+				$(".container").css("background-image", "url('/img/scatteredCloudsDay.jpg')");
+				break;
+			case "03n":
+				$(".container").css("background-image", "url('/img/scatteredCloudNight.jpg')");
+				break;
+			case "04d":
+				$(".container").css("background-image", "url('/img/scatteredCloudsDay.jpg')");
+				break;
+			case "04n":
+				$(".container").css("background-image", "url('/img/scatteredCloudsNight.jpg')");
+				break;
+			case "09d":
+				$(".container").css("background-image", "url('/img/dayRain.jpg')");
+				break;
+			case "09n":
+				$(".container").css("background-image", "url('/img/nightRain.jpg')");
+				break;
+			case "10d":
+				$(".container").css("background-image", "url('/img/dayRain.jpg')");
+				break;
+			case "10n":
+				$(".container").css("background-image", "url('/img/nightRain.jpg')");
+				break;
+			case "11d":
+				$(".container").css("background-image", "url('/img/dayRain.jpg')");
+				break;
+			case "11n":
+				$(".container").css("background-image", "url('/img/nightRain.jpg')");
+				break;
+			case "50d":
+				$(".container").css("background-image", "url('/img/mistDay')");
+				break;
+			case "50n":
+				$(".container").css("background-image", "url('/img/mistDay.jpg')");
+				break;
 
-				default:
-				$(".container").css({"background-image:" , "url('/img/nightRain.jpg')"});
+			default:
+				$(".container").css("background-image" , "url('/img/nightRain.jpg')");
 			}
 
 		});
