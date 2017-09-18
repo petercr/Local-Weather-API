@@ -86,7 +86,7 @@ function geoFindMe() {
 				break;
 			case "50n": // mist night
 				$(".container").css("background-image", "url('/img/mistDay.jpg')");
-				$("#icons").html("<i class='wi wi-night-fog'></i>");
+				$("#icons").html("<i class='wi wi-night-fog' '></i>");
 				break;
 
 			default:

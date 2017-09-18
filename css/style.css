@@ -1,12 +1,17 @@
 body {
     padding: 0;
     margin: 0;
+    overflow: hidden;
     }
 
 i {
-    height: 100px;
-    width: 100px;
-    padding-top: 50px;
+    margin: 25px;
+    padding-top: 10px;
+    transform: scale(4);
+}
+
+.fa {
+    
 }
 
 .container {
@@ -18,12 +23,17 @@ i {
     padding: 50px;
     background-image: url("/img/dayRain.jpg");
     background-size: cover;
-    background-position: center
+    background-position: center;
+    
     
 }
 
 .bottom {
      /* padding-top: 200px; */
+}
+
+#temp {
+    padding-top: 50px;
 }
 
 #changeTemp {
