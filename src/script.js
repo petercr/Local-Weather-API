@@ -89,10 +89,6 @@ function geoFindMe() {
 				$("#icons").html("<i class='wi wi-night-fog' '></i>");
 				break;
 
-			default:
-				$(".container").css("background-image" , "url('/img/nightRain.jpg')");
-				$("#icons").html("<i class='wi wi-day-sunny'></i>");
-				console.log("something went wrong");
 			}
 
 		});
