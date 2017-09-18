@@ -3,6 +3,12 @@ body {
     margin: 0;
     }
 
+i {
+    height: 100px;
+    width: 100px;
+    padding-top: 50px;
+}
+
 .container {
     height: 100%;
     color: #FFF;
