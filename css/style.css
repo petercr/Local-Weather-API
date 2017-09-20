@@ -29,21 +29,32 @@ i {
     position: fixed;
     z-index:1;
     left: 0;
-    top:0;
+    top: 0;
     height: 100%;
     width:100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
   }
 
+  .modal-header {
+    background: #50CDFF;
+}
+
   .modal-content{
     background-color:#f4f4f4;
     color: #000000;
     margin: 20% auto;
     width:70%;
+    height: 200px;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name:modalopen;
     animation-duration:1s;
+  }
+
+
+@keyframes modalopen{
+    from{ opacity: 0}
+    to {opacity: 1}
   }
 
 #temp {
