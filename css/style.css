@@ -38,6 +38,13 @@ i {
 
   .modal-header {
     background: #50CDFF;
+    
+}
+
+.modal i {
+    transform: scale(3);
+    padding-right: 25px;
+    margin: 10px;
 }
 
   .modal-content{
@@ -45,11 +52,15 @@ i {
     color: #000000;
     margin: 20% auto;
     width:70%;
-    height: 200px;
+    height: auto;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name:modalopen;
     animation-duration:1s;
   }
+
+#modalSun {
+    color: rgb(255, 251, 0);
+}
 
 
 @keyframes modalopen{
