@@ -10,10 +10,6 @@ i {
     transform: scale(4);
 }
 
-.fa {
-    
-}
-
 .container {
     height: 100%;
     color: #FFF;
@@ -26,10 +22,6 @@ i {
     background-position: center;
     
     
-}
-
-.bottom {
-     /* padding-top: 200px; */
 }
 
 #temp {
