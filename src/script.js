@@ -119,3 +119,7 @@ function switchTemp(){
 		$("#changeTemp").html("&deg; F");
 	}
 }
+
+function closeModal(){
+	$(".modal").css("display", "none");
+}
