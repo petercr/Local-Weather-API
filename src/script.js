@@ -69,7 +69,7 @@ function geoFindMe() {
 			case "09d": // showers and rain day
 			case "10d": // rain day
 			case "11d": // thunderstomrs
-				$(".container").css("background-image", "url('/img/dayRain.jpg')");
+				$(".container").css("background-image", "url('/img/rainFloor.jpg')");
 				$("#icons").html("<i class='wi wi-day-rain'></i>");
 				break;
 			
