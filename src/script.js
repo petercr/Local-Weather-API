@@ -76,7 +76,7 @@ function geoFindMe() {
 			case "09n": // showers and rain night
 			case "10n": // rain night
 			case "11n": // thunderstorm night
-				$(".container").css("background-image", "url('/img/nightRain.jpg')");
+				$(".container").css("background-image", "url('/img/rainFloor.jpg')");
 				$("#icons").html("<i class='wi wi-night-rain'></i>");
 				break;
 			
