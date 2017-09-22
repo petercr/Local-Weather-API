@@ -97,11 +97,10 @@ function geoFindMe() {
 
 	function error() {
 		output.innerHTML = "Unable to retrieve your location";
-		// add in a function to pop up a modal for zip code
+		$(".modal").css("display","show");
 	}
 
-	output.innerHTML = "<p>Locating…</p>";
-
+	
 	navigator.geolocation.getCurrentPosition(success, error);
 
 
@@ -120,6 +119,13 @@ function switchTemp(){
 	}
 }
 
-function closeModal(){
-	$(".modal").css("display", "none");
+function closeModal(data){
+	// check to see if the zip code is valid
+	var temp = $("#zipCode").html();
+	if (temp <= 00501 && temp >= 99950){
+		$(".modal").css("display", "none");
+	}
+	else {
+		alert("Zip Code Not Valid in US");
+	}
 }
