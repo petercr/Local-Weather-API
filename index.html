@@ -34,7 +34,10 @@
                     <i class="wi wi-day-sunny" id="modalSun"></i>
                     <p>Please enter in your zip code for your local weather</p>
                 </span>
-                <textarea name="zipCode" id="zipCode" cols="5" rows="1" autofocus></textarea>
+                <input type="number" name="zipCode" id="zipCode" max="99950" min="00501" inputMode="numeric" placeholder="12345"  required>
+                 
+                
+                <!-- <textarea name="zipCode" id="zipCode" cols="5" rows="1" autofocus></textarea> -->
                 <button id="submitZip" onclick="closeModal(zipCode)">Get the weather</button>
                 
             </div>
