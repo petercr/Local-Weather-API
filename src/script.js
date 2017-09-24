@@ -7,7 +7,7 @@ function geoFindMe() {
 	if (!navigator.geolocation) {
 		output.innerHTML = "Geolocation is not supported by your browser";
 		// add in a function to pop up a modal for zip code
-		$(".modal").css("display","visible");
+		$(".modal").css("display","block");
 		return;
 	}
 
@@ -98,7 +98,7 @@ function geoFindMe() {
 
 	function error() {
 		output.innerHTML = "Unable to retrieve your location";
-		$(".modal").css("display","visible");
+		$(".modal").css("display","block");
 	}
 
 	
