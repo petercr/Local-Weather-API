@@ -15,7 +15,7 @@ function geoFindMe() {
 		latitude = position.coords.latitude.toFixed(4);
 		longitude = position.coords.longitude.toFixed(4);
 
-		var api = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon="+ longitude + "&units=imperial" + "&APPID=9bc2e8db193857d51a6764aae51aa49c";
+		let api = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon="+ longitude + "&units=imperial" + "&APPID=9bc2e8db193857d51a6764aae51aa49c";
 
 		// jQuery AJAX call FreeCodeCamp Weather API
 		$.getJSON(api, function(data) {
@@ -65,6 +65,25 @@ function closeModal(){
 	var zipCode = document.getElementById("zipCode");
 	console.log(zipCode.value);
 	$(".modal").css("display","none");
+	let api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode.value + ",us&units=imperial" + "&APPID=9bc2e8db193857d51a6764aae51aa49c";
+
+	// jQuery AJAX call FreeCodeCamp Weather API
+	$.getJSON(api, function(data) {
+		Ftemp = data.main.temp;
+		Ctemp = (Ftemp - 32) * (5 / 9);
+		var city = data.name;
+		var weather = data.weather[0].description;
+		var icon = data.weather[0].icon;
+		var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+
+		$("#temp").html(Math.round(data.main.temp) + " &deg; F"); // displays degrees Far
+		$("#location").html("You are " + city + " " + ", " + data.sys.country); // displays city and country
+		$("#condition").html(weather); // displays the weather condition
+		
+		pickIcon(icon);
+		
+
+	});
 
 	
 
