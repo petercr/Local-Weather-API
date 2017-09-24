@@ -12,8 +12,8 @@ function geoFindMe() {
 	}
 
 	function success(position) {
-		latitude = position.coords.latitude.toFixed(2);
-		longitude = position.coords.longitude.toFixed(2);
+		latitude = position.coords.latitude.toFixed(4);
+		longitude = position.coords.longitude.toFixed(4);
 
 		output.innerHTML = "<p>Latitude is " + latitude + "° <br>Longitude is " + longitude + "°</p>";
 
@@ -97,7 +97,6 @@ function geoFindMe() {
 	} // end success
 
 	function error() {
-		output.innerHTML = "Unable to retrieve your location";
 		$(".modal").css("display","block");
 	}
 
@@ -122,12 +121,6 @@ function switchTemp(){
 
 function closeModal(){
 	// check to see if the zip code is valid
-	var temp = $("#zipCode").html();
-	if (temp <= 00501 && temp >= 99950){
-		$(".modal").css("display", "none");
-	}
-	else {
-		$(".modal").css("display", "none");
-		console.log(temp);
-	}
+	
+
 }
