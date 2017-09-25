@@ -83,9 +83,6 @@ function closeModal(){
 		
 
 	});
-
-	
-
 }
 
 function pickIcon(icon){
