@@ -62,10 +62,9 @@ function switchTemp(){
 
 function closeModal(){
 	// HTML already validated zip code value
-	var zipCode = document.getElementById("zipCode");
-	console.log(zipCode.value);
+	var zipCode = document.getElementById("zipCode").value;
 	$(".modal").css("display","none");
-	let api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode.value + ",us&units=imperial" + "&APPID=9bc2e8db193857d51a6764aae51aa49c";
+	let api = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&units=imperial" + "&APPID=9bc2e8db193857d51a6764aae51aa49c";
 
 	// jQuery AJAX call FreeCodeCamp Weather API
 	$.getJSON(api, function(data) {
