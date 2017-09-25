@@ -23,7 +23,7 @@ i {
     
     
 }
-
+ /* classes and animation for the modal */
 .modal{
     display: none;
     position: fixed;
@@ -67,6 +67,9 @@ i {
     from{ opacity: 0}
     to {opacity: 1}
   }
+
+ 
+/* styling for the div's containing the weather data and icon   */
 
 #temp {
     padding-top: 50px;
