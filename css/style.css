@@ -20,6 +20,7 @@ i {
     background-color: #F4F4F4;
     background-size: cover;
     background-position: center;
+    font-family: 'Merriweather', serif;
       
 }
 
@@ -43,6 +44,7 @@ i {
     width:100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
+    font-family: 'Oswald', sans-serif;
   }
 
   .modal-header {
@@ -54,6 +56,7 @@ i {
     transform: scale(3);
     padding-right: 25px;
     margin: 10px;
+    
 }
 
   .modal-content{
@@ -69,6 +72,7 @@ i {
 
 #modalSun {
     color: rgb(255, 251, 0);
+    opacity: 0.33;
 }
 
 
@@ -94,8 +98,9 @@ i {
 }
 
 #condition {
-    font-size: 1.5em;
-    letter-spacing: 5px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    
 }
 
 #condition::first-letter {
