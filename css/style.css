@@ -16,7 +16,7 @@ i {
     background: #000;
     text-align: center;
     font-size: 1.25em;
-    padding: 50px;
+    padding: 25px;
     background-color: #F4F4F4;
     background-size: cover;
     background-position: center;
@@ -95,4 +95,9 @@ i {
 
 #condition {
     font-size: 1.5em;
+    letter-spacing: 5px;
+}
+
+#condition::first-letter {
+    text-transform: uppercase;
 }
