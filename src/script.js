@@ -24,11 +24,11 @@ function geoFindMe() {
 			var city = data.name;
 			var weather = data.weather[0].description;
 			var icon = data.weather[0].icon;
-			var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+			
 
-			$("#temp").html(Math.round(data.main.temp) + " &deg; F"); // displays degrees Far
-			$("#location").html("You are " + city + " " + ", " + data.sys.country); // displays city and country
-			$("#condition").html(weather); // displays the weather condition
+			$("#temp").html("<p>" + Math.round(data.main.temp) +  "&deg; F" + "</p>"); // displays degrees Far
+			$("#location").html("<p>" + "You are " + city + ", " + data.sys.country + "</p>"); // displays city and country
+			$("#condition").html("<p>" + weather + "</p>"); // displays the weather condition
 			
 			pickIcon(icon);
 			
@@ -73,11 +73,11 @@ function closeModal(){
 		var city = data.name;
 		var weather = data.weather[0].description;
 		var icon = data.weather[0].icon;
-		var iconURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+		
 
-		$("#temp").html(Math.round(data.main.temp) + " &deg; F"); // displays degrees Far
-		$("#location").html("You are " + city + " " + ", " + data.sys.country); // displays city and country
-		$("#condition").html(weather); // displays the weather condition
+		$("#temp").html("<p>" + Math.round(data.main.temp) +  "&deg; F" + "</p>"); // displays degrees Far
+		$("#location").html("<p>" + "You are " + city + ", " + data.sys.country + "</p>"); // displays city and country
+		$("#condition").html("<p>" + weather + "</p>"); // displays the weather condition
 		
 		pickIcon(icon);
 		
