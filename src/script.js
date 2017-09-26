@@ -89,58 +89,58 @@ function pickIcon(icon){
 
 	switch (icon) { // switch statement to change background image for each weather type
 	case "01d": //clear skys daytime
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/clearDay.jpg')"); /* Local-Weather-API/img/clearDay.jpg */
+		$(".showcase").css("background-image", "url('/img/clearDay.jpg')"); /* Local-Weather-API/img/clearDay.jpg */
 		$("#icons").html("<i class='wi wi-day-sunny'></i>");
 		break;
 	case "01n": // clear sky night
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/clearSkyNight.jpg')");
+		$(".showcase").css("background-image", "url('/img/clearSkyNight.jpg')");
 		$("#icons").html("<i class='wi wi-night-clear'></i>");
 		break;
 	case "02d": // few clouds day
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/fewCloudDay.jpg')");
+		$(".showcase").css("background-image", "url('/img/fewCloudDay.jpg')");
 		$("#icons").html("<i class='wi wi-day-cloudy'></i>");
 		break;
 	case "02n": // few clouds night
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/fewCloudsNight.jpg')");
+		$(".showcase").css("background-image", "url('/img/fewCloudsNight.jpg')");
 		$("#icons").html("<i class='wi wi-night-cloudy'></i>");
 		break;
 	case "03d": // scattered clouds day
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/scatteredCloudsDay.jpg')");
+		$(".showcase").css("background-image", "url('/img/scatteredCloudsDay.jpg')");
 		$("#icons").html("<i class='wi wi-day-sunny-overcast'></i>");
 		break;
 	case "03n": // scattered clouds night
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/scatteredCloudNight.jpg')");
+		$(".showcase").css("background-image", "url('/img/scatteredCloudNight.jpg')");
 		$("#icons").html("<i class='wi wi-night-partly-cloudy'></i>");
 		break;
 	case "04d": // broken clouds day
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/scatteredCloudsDay.jpg')");
+		$(".showcase").css("background-image", "url('/img/scatteredCloudsDay.jpg')");
 		$("#icons").html("<i class='wi wi-day-cloudy-high'></i>");
 		break;
 	case "04n": // broken clouds night
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/scatteredCloudsNight.jpg')");
+		$(".showcase").css("background-image", "url('/img/scatteredCloudsNight.jpg')");
 		$("#icons").html("<i class='wi wi-night-partly-cloudy'></i>");
 		break;
 		
 	case "09d": // showers and rain day
 	case "10d": // rain day
 	case "11d": // thunderstomrs
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/rainFloor.jpg')");
+		$(".showcase").css("background-image", "url('/img/rainFloor.jpg')");
 		$("#icons").html("<i class='wi wi-day-rain'></i>");
 		break;
 		
 	case "09n": // showers and rain night
 	case "10n": // rain night
 	case "11n": // thunderstorm night
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/rainFloor.jpg')");
+		$(".showcase").css("background-image", "url('/img/rainFloor.jpg')");
 		$("#icons").html("<i class='wi wi-night-rain'></i>");
 		break;
 		
 	case "50d": // mist day
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/mistDay')");
+		$(".showcase").css("background-image", "url('/img/mistDay')");
 		$("#icons").html("<i class='wi wi-day-fog'></i>");
 		break;
 	case "50n": // mist night
-		$(".showcase").css("background-image", "url('Local-Weather-API/img/mistDay.jpg')");
+		$(".showcase").css("background-image", "url('/img/mistDay.jpg')");
 		$("#icons").html("<i class='wi wi-night-fog' '></i>");
 		break;
 
