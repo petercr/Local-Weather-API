@@ -12,7 +12,7 @@
     <script /* jQuery 3.2.1.min */ src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
     <!-- Link to custom script with logic-->
-    <script src="/src/script.js" charset="utf-8"></script>
+    <script src="https://petercr.github.io/Local-Weather-API/src/script.js" charset="utf-8"></script>
     <!-- Link to weather-icons css file -->
     <link rel="stylesheet" href="https://petercr.github.io/Local-Weather-API/css/weather-icons.min.css">
     <!-- Link to FontAwesome icons -->
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Link to Google Fonts for styling of text  -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
-    
+
 
 
 </head>
@@ -33,16 +33,16 @@
         <div id="icons"></div>
         <div class="modal">
             <div class="modal-content">
-                
+
                 <h2 class="modal-header">We are unable to use your browsers location to find you...</h2>
-                
-                    <i class="wi wi-day-sunny" id="modalSun"></i>
-                    <p>Please enter in your zip code for your local weather</p>
-                    <input type="number" name="zipCode" id="zipCode" max="99950" min="00501" inputMode="numeric" placeholder="12345" required autofocus>
-                        
-                
+
+                <i class="wi wi-day-sunny" id="modalSun"></i>
+                <p>Please enter in your zip code for your local weather</p>
+                <input type="number" name="zipCode" id="zipCode" max="99950" min="00501" inputMode="numeric" placeholder="12345" required autofocus>
+
+
                 <button type="button" class="btn" id="submitZip" onclick="closeModal()">Get the weather</button>
-            
+
             </div>
         </div>
         <div id="temp"></div>
@@ -59,7 +59,7 @@
 
         </div>
         <div>
-           
+
 </body>
 
 
