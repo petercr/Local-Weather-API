@@ -20,9 +20,13 @@ i {
     background-color: #F4F4F4;
     background-size: cover;
     background-position: center;
-    
-    
+      
 }
+
+.bottom p {
+    font-size: 1em;
+}
+
  /* classes and animation for the modal */
 .modal{
     display: none;
