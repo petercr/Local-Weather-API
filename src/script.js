@@ -135,7 +135,7 @@ function pickIcon(icon) {
             break;
 
         case "50d": // mist day
-            $(".showcase").css("background-image", "url('https://petercr.github.io/Local-Weather-API/img/mistDay')");
+            $(".showcase").css("background-image", "url('https://petercr.github.io/Local-Weather-API/img/mistDay.jpg')");
             $("#icons").html("<i class='wi wi-day-fog'></i>");
             break;
         case "50n": // mist night
