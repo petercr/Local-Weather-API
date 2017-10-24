@@ -27,7 +27,7 @@ function geoFindMe() {
 
 
             $("#temp").html("<p>" + Math.round(data.main.temp) + "&deg; F" + "</p>"); // displays degrees Far
-            $("#location").html("<p>" + "You are " + city + ", " + data.sys.country + "</p>"); // displays city and country
+            $("#location").html("<p>" + "You are in " + city + ", " + data.sys.country + "</p>"); // displays city and country
             $("#condition").html("<p>" + weather + "</p>"); // displays the weather condition
 
             pickIcon(icon);
